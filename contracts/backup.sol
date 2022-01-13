@@ -5,7 +5,7 @@ import "@openzeppelin/contracts/utils/Context.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./IoT.sol"; //https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d
 
-contract Transport is Ownable {
+contract backup is Ownable {
     /// @notice Register driver
     //truck driver, can receive ether
     address public driverId;

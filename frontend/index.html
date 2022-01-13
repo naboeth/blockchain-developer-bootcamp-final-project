@@ -10,35 +10,63 @@
     <style> div {text-align: center;} </style> 
 
     <script src='../node_modules/web3/dist/web3.min.js'></script> 
+    <style>
+    body {
+        background-image: url("cover-png.png");
+        background-color: #cccccc;
+      }
+    </style>
+    <!-- style="background-image:url('./cover-png.png');" -->
 
 </head>
 
-<body style="background-color:rgb(116, 225, 240);">
-<div style="font-family: Arial"> 
-    Truck Driver Payment
+<body
+style="
+  background-image: url(cover-png.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: 0.8;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+"
+>
+<div
+  style="
+    font-family: Arial;
+    background-color: rgb(116, 225, 240);
+    width: 60%;
+  "
+  
+>
+    <br /><br />
+    <h1 style="margin-top: 20px;">Truck Driver Payment</h1>
     <br /><br />
     <input id="name-input-box" type="string" placeholder="Your Name please">
 
-    <button onclick="setName();">Set Name Driver</button>
+    <button style="border-radius: 5px; margin-left: 5px; padding: 3px "onclick="setName();">Set Name Driver</button>
 
     <br /><br />
     Today's driver: <span id="driver"> ~(=^–^)</span>
     <br /><br />
     <br>
-    <button onclick="setDrivers();">Set Driver</button>
-    <button onclick="getDrivers();">Get Driver</button>
+    <button style="border-radius: 5px; margin-left: 5px; padding: 3px " onclick="setDrivers();">Set Driver</button>
+    <button style="border-radius: 5px; margin-left: 5px; padding: 3px "onclick="getDrivers();">Get Driver</button>
 
     <br /><br />
     Status: <span id="status">Loading...</span>
 
     <br /><br />
-    Did Driver arrive?<button onclick="changeStateArrived();">Change State Arrived</button>
+    Did Driver arrive?<button style="border-radius: 5px; margin-left: 5px; padding: 3px " onclick="changeStateArrived();">Change State Arrived</button>
 
     <!-- <br /><br />
     <button onclick="sendPayment();">Send Payment</button> -->
 
     <br /><br />
-    <button onclick="sendPayment();">Send Payment</button>
+    <button style="border-radius: 5px; margin-left: 5px; padding: 3px " onclick="sendPayment();">Send Payment</button>
+    <br /><br />
 </div>
 
     <script src="dapp.js"></script>

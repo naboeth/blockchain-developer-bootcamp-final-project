@@ -34,9 +34,11 @@ contract Transport is Ownable {
     }
 
     ///@notice every contract,
-    fallback() external payable;
+    //fallback() external payable;
 
     mapping(address => Driver) public drivers;
+
+    constructor() onlyOwner {}
 
     ///@notice When driver register, their state is set to waiting
     function setDriver(string memory _name) public returns (bool) {
@@ -82,9 +84,7 @@ contract Transport is Ownable {
         // Call returns a boolean value indicating success or failure.
         // This is the current recommended method to use.
         //(bool sent, bytes memory data) = _driverId.call{value: msg.value}("");
-        bool sent = _driverId.call{value: msg.value}("");
+        (bool sent, bytes memory data) = _driverId.call{value: msg.value}("");
         require(sent, "Failed to send Ether");
     }
-
-    constructor() onlyOwner {}
 }
