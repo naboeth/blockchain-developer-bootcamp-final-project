@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" src="style.css"> -->
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Web 3 Demo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style> div {text-align: center;} </style> 
+
+    <script src='../node_modules/web3/dist/web3.min.js'></script> 
+
+</head>
+
+<body style="background-color:rgb(116, 225, 240);">
+<div style="font-family: Arial"> 
+    Truck Driver Payment
+    <br /><br />
+    <input id="name-input-box" type="string" placeholder="Your Name please">
+
+    <button onclick="setName();">Set Name Driver</button>
+
+    <br /><br />
+    Today's driver: <span id="driver"> ~(=^–^)</span>
+    <br /><br />
+    <br>
+    <button onclick="setDrivers();">Set Driver</button>
+    <button onclick="getDrivers();">Get Driver</button>
+
+    <br /><br />
+    Status: <span id="status">Loading...</span>
+
+    <br /><br />
+    Did Driver arrive?<button onclick="changeStateArrived();">Change State Arrived</button>
+
+    <!-- <br /><br />
+    <button onclick="sendPayment();">Send Payment</button> -->
+
+    <br /><br />
+    <button onclick="sendPayment();">Send Payment</button>
+</div>
+
+    <script src="dapp.js"></script>
+</body>
+
+</html>
