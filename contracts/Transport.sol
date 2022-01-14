@@ -1,15 +1,12 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
+pragma solidity ^0.8.0;
 
 /// @title Automatic payment execution for truck drivers
 /// @author Thuy Tien Nguyen Thi
 /// @notice You can use this contract for only the most basic simulation
-/// @dev All function calls are currently implemented without side effects
-/// @custom:experimental This is an experimental contract.
 
 import "@openzeppelin/contracts/utils/Context.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "./IoT.sol";
 
 contract Transport is Ownable {
     address public driverId;
@@ -33,14 +30,11 @@ contract Transport is Ownable {
         arrived
     }
 
-    ///@notice every contract,
-    //fallback() external payable;
-
     mapping(address => Driver) public drivers;
 
     constructor() onlyOwner {}
 
-    ///@notice When driver register, their state is set to waiting
+    ///@notice When driver registers, their state is set to waiting
     function setDriver(string memory _name) public returns (bool) {
         driverId = msg.sender;
         drivers[driverId] = Driver({
@@ -80,10 +74,9 @@ contract Transport is Ownable {
     }
 
     ///@notice send Payment to driver
+    ///@notice function not used in contract as the contract itself received the funds,
+    ///@notice which was intended for the driver account
     function sendPayment(address payable _driverId) public payable {
-        // Call returns a boolean value indicating success or failure.
-        // This is the current recommended method to use.
-        //(bool sent, bytes memory data) = _driverId.call{value: msg.value}("");
         (bool sent, bytes memory data) = _driverId.call{value: msg.value}("");
         require(sent, "Failed to send Ether");
     }

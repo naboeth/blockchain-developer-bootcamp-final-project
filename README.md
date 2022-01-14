@@ -7,7 +7,7 @@ Example Workflow
 
 1. Truck driver will register with their name and adress in the smart contract [State: Waiting].
 2. Truck driver departs [State: departed]
-3. Truck driver arrives [State: arrived] and will be automatically paid via smart contract execution
+3. Truck driver arrives [State: arrived] and will be paid via smart contract execution
 
 Installation
 
@@ -32,3 +32,6 @@ X) Install dependencies
 ```
 npm install
 ```
+
+Demo Video
+https://www.youtube.com/watch?v=6TcwSIa6tmM
