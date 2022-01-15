@@ -41,7 +41,9 @@ truffle migrate
 
 ## Interacting via frontend
 
-have the Metamask browser extension installed then
+have the Metamask browser extension installed with two accounts that have ether, e.g. name them Owner and Driver
+
+then
 
 in Visual Studio Code
 
@@ -50,6 +52,9 @@ open the index.html in the frontend folder via live server
 ```
 
 Enjoy using the dApp!
+
+Also publicly hosted on:
+https://naboeth.github.io/blockchain-developer-bootcamp-final-project/
 
 ## Running unit tests
 
