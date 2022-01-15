@@ -40,9 +40,9 @@ contract("Transport", function (accounts) {
 
     describe("Set Driver", () => {
       it("should register and return name", async () => {
-        await contract.setDriver("Lena", { from: driverId });
+        await contract.setDriver("L", { from: driverId });
         const driver = await contract.getDriver({ from: driverId });
-        assert.equal(driver.name, "Lena", "Wrong name registered");
+        assert.equal(driver.name, "L", "Wrong name registered");
       });
     });
 
@@ -68,7 +68,7 @@ contract("Transport", function (accounts) {
     });
 
     describe("Change state to arrived", () => {
-      it("should change state to arrivved", async () => {
+      it("should change state to arrived", async () => {
         const result = await contract.changeStateArrived();
         const event = result.logs[0].args;
         assert.equal(event.state, "Arrived");
