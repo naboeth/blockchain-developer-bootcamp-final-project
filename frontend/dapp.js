@@ -318,13 +318,14 @@ async function changeStateArrived() {
 }
 
 async function sendPayment() {
+  //is not the sendPayment function of the smart contract
   updateStatus("Sending out payment");
   const account = await getCurrentAccount();
   const amount = "0.0004"; //only fixed amount at the moment
   const amountToSend = web3.utils.toWei(amount, "ether"); // Convert to wei value
   await web3.eth.sendTransaction({
     from: account,
-    to: "0x0db9B8cD2D71F34c0e22b51850d93ffb8e1dCD4E", //only fixed receiver at the moment
+    to: "0x0db9B8cD2D71F34c0e22b51850d93ffb8e1dCD4E", //PLS put address of Driver metamask account
     //to: CONTRACT.options.address,
     value: amountToSend,
   });
