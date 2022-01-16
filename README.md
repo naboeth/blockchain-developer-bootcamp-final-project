@@ -72,6 +72,8 @@ https://naboeth.github.io/blockchain-developer-bootcamp-final-project/
 
 ## Running unit tests
 
+Use port 8545
+
 truffle test
 
 ## Demo Video
